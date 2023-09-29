@@ -1,0 +1,56 @@
+@use 'variables'
+@use 'mixins'
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    font-family: 'Poppins', sans-serif
+    font-size: 15px
+    color: variables.$font-primary
+
+body
+    height: 100vh
+    @include mixins.container
+    gap: 2rem
+
+    .top-section
+        height: 25vh
+        min-width: 375px
+        @include mixins.container
+        justify-content: center
+        text-align: center
+
+    h1
+        font-size: 2rem
+    
+    h2
+        font-size: 2rem
+        font-weight: 200 
+
+    p
+        font-size: 1rem
+    
+    .card-section
+        height: 75vh
+        @include mixins.container
+        flex-flow: row wrap
+        justify-content: center
+        gap: 10px
+
+        &-middle
+            @include mixins.container
+            gap: 10px
+
+        &-card1
+            @include mixins.card(variables.$card-cyan)
+        
+        &-card2
+            @include mixins.card(variables.$card-red)
+        
+        &-card3
+            @include mixins.card(variables.$card-orange)
+        
+        &-card4
+            @include mixins.card(variables.$card-blue)

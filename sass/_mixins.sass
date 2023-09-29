@@ -1,0 +1,32 @@
+@use 'variables'
+
+@mixin container
+    display: flex
+    align-items: center
+    flex-direction: column
+
+@mixin card($bg-color)
+    min-width: 375px
+    max-width: 405px
+    width: 30%
+    height: 200px
+    padding: 2rem
+
+    border-top: 5px solid $bg-color
+    border-radius: 10px
+    box-shadow: 0 5px 10px #0000004d
+
+    display: flex
+    flex-direction: column
+    align-content: start
+
+    img
+        margin-top: auto
+        align-self: end
+        width: 50px
+
+    h3
+        font-size: 1.3rem
+
+    p
+        font-size: .8rem
